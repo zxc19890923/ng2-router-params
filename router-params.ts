@@ -15,5 +15,9 @@ export class AboutInfoComponent implements OnInit{
         this.route.params.subscribe(params => {
             console.log(params); //{ id : "xx" }
         });
+        // 详细写法
+        this.route.params.sbuscripbe(
+            params => this.id = params
+        )
     }
 }
