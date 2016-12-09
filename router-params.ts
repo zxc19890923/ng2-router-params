@@ -8,6 +8,7 @@ import {ActivatedRoute} from "@angular/router";
 
 export class AboutInfoComponent implements OnInit{
     // 初始化变量
+    id: Object;
     constructor(public route: ActivatedRoute) {
     }
     // 方法中操作id, 通过id查询信息等等
@@ -17,7 +18,7 @@ export class AboutInfoComponent implements OnInit{
         });
         // 详细写法
         this.route.params.sbuscripbe(
-            params => this.id = params
+            params => this.id = params // {id: 2} 对象
         )
     }
 }
